@@ -12,6 +12,7 @@ app.route('/number')
 		if (err){
 			res.send(err);
 		}
+		res.set('Access-Control-Allow-Origin', '*');
 		res.json({"number": data});
 	});
 })
@@ -23,6 +24,7 @@ app.route('/number')
 		  res.json({"response": "error"});
 		  return
 		}
+		res.set('Access-Control-Allow-Origin', '*');
 		res.json({"response": "success"})
 	  });
 });
