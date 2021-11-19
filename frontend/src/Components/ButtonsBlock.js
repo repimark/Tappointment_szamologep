@@ -8,7 +8,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="1"
+            name="1"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -19,7 +19,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="2"
+            name="2"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -30,7 +30,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="3"
+            name="3"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -40,7 +40,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-dark"
-            value="+"
+            name="+"
             onClick={(e) => countFunction(e.target)}
             size="lg"
           >
@@ -53,7 +53,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="4"
+            name="4"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -64,7 +64,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="5"
+            name="5"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -75,7 +75,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="6"
+            name="6"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -86,7 +86,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-dark"
-            value="-"
+            name="-"
             onClick={(e) => countFunction(e.target)}
             size="lg"
           >
@@ -99,7 +99,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="7"
+            name="7"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -110,7 +110,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="8"
+            name="8"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -121,18 +121,18 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="9"
+            name="9"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
-            {" "}
-            9{" "}
+            {""}
+            9{""}
           </Button>
         </div>
         <div className="col">
           <Button
             variant="outline-dark"
-            value="*"
+            name="*"
             onClick={(e) => countFunction(e.target)}
             size="lg"
           >
@@ -145,7 +145,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-warning"
-            value="."
+            name="."
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -156,7 +156,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="0"
+            name="0"
             onClick={(e) => numberFunction(e.target)}
             size="lg"
           >
@@ -167,7 +167,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-danger"
-            value="c"
+            name="c"
             onClick={(e) => countFunction(e.target)}
             size="lg"
           >
@@ -178,7 +178,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-dark"
-            value="/"
+            name="/"
             onClick={(e) => countFunction(e.target)}
             size="lg"
           >
@@ -191,7 +191,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="save"
+            name="save"
             onClick={(e) => apiFunction(e.target)}
             size="sm"
           >
@@ -202,7 +202,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-info"
-            value="load"
+            name="load"
             onClick={(e) => apiFunction(e.target)}
             size="sm"
           >
@@ -212,7 +212,7 @@ const ButtonsBlock = ({ numberFunction, countFunction, apiFunction }) => {
         <div className="col">
           <Button
             variant="outline-success"
-            value="="
+            name="="
             onClick={(e) => countFunction(e.target)}
             size="lg"
           >

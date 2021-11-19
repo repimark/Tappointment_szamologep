@@ -9,30 +9,25 @@ function App() {
   const [result, setResult] = useState("");
   const [count, setCount] = useState({ firstNumber: "", muvelet: "" });
 
-  const apiEventHandler = (e) => {
-    if (e.value === "load") {
-      const headers = {
-        "Access-Control-Allow-Origin": "*",
-      };
-      axios
-        .get("http://localhost:5500/number", { mode: "cors" })
-        .then((resp) => setResult(resp.data.number));
+  const apiEventHandler = async (e) => {
+    if (e.name === "load") {
+      const getResp = await axios.get("http://localhost:5500/number", { mode: "cors" })
+      setResult(getResp.data.number)
     } else {
-      axios
-        .post(
-          "http://localhost:5500/number",
+      const postResp = await axios.post("http://localhost:5500/number",
           { number: result },
           { mode: "cors" }
         )
-        .then((resp) => alert(resp.message));
+        alert(postResp.data.message)
     }
   };
 
   const numberEventHandler = (e) => {
-    setResult(`${result}${e.value}`);
+    console.log(e.name)
+    setResult(`${result}${e.name}`);
   };
   const countEventHandler = (e) => {
-    if (e.value === "=") {
+    if (e.name === "=") {
       switch (count.muvelet) {
         case "+":
           let plusResult = parseFloat(count.firstNumber) + parseFloat(result);
@@ -58,7 +53,7 @@ function App() {
           return null;
       }
     } else {
-      setCount({ firstNumber: result, muvelet: e.value });
+      setCount({ firstNumber: result, muvelet: e.name });
       setResult("");
     }
   };
@@ -74,8 +69,8 @@ function App() {
           style={{
             width: "50%",
             margin: "auto",
-            width: "50%",
-            
+            paddingTop: '20px',
+            backgroundColor: '#f1f2f6',
             padding: "10px",
           }}
         >
