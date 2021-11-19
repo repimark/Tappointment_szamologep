@@ -1,11 +1,12 @@
 import React from "react";
+import { FormControl, Container } from "react-bootstrap";
 
 const ResultBar = ({ result }) => {
   return (
     <>
-      <div className="">
-        <input type="text" className="form-control" value={result} />
-      </div>
+        <Container>
+            <FormControl type="text" className="form-control" value={result} size="lg"></FormControl>
+        </Container>
     </>
   );
 };
