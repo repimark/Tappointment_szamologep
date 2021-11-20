@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 
 /*
-*. @return {message, data} returns a json string 
+*. @returns {message, data} returns a json string 
 *  
 */
 router.get('/', (req,res,next) => {
@@ -22,7 +22,7 @@ router.get('/', (req,res,next) => {
     
 });
 /*
-*. @return {message, success, number}a json string with a message, a boolean of success, and the input number
+*. @returns {message, success, number}a json string with a message, a boolean of success, and the input number
 *  @param {number} a string in req.body
 */
 router.post('/', (req, res, next) => {
