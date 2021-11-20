@@ -3,8 +3,8 @@ const router = express.Router();
 const fs = require('fs');
 
 /*
-* 
-*
+*. @response returns a json string 
+*  
 */
 router.get('/', (req,res,next) => {
     fs.readFile('./data/number-store.txt','utf-8', function (err,data){
@@ -21,7 +21,10 @@ router.get('/', (req,res,next) => {
 	});
     
 });
-
+/*
+*. @response returns a json string with a message, a boolean of success, and the input number
+*  @params a string in req.body
+*/
 router.post('/', (req, res, next) => {
     const number = req.body.number.toString();
     fs.writeFile('data/number-store.txt', number, err => {
