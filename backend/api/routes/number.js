@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
-/*
-*. @returns {message, data} returns a json string 
-*  
-*/
+/**
+ * @returns {json} message, number returns
+ *  
+ */
 router.get('/', (req,res,next) => {
     fs.readFile('./data/number-store.txt','utf-8', function (err,data){
 		if (err){
@@ -21,10 +21,11 @@ router.get('/', (req,res,next) => {
 	});
     
 });
-/*
-*. @returns {message, success, number}a json string with a message, a boolean of success, and the input number
-*  @param {number} a string in req.body
-*/
+/**
+ * 
+ * @param {string} number in req.body
+ * @returns {json} with a message, a boolean of success, and the input number.
+ */
 router.post('/', (req, res, next) => {
     const number = req.body.number.toString();
     fs.writeFile('data/number-store.txt', number, err => {
